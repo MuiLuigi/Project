@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud-Native Network Monitoring Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Cloud-Native Network Monitoring Dashboard</h1>
+    <p>Real-time telemetry for latency and bandwidth</p>
+  </header>
+
+  <main class="container">
+    <section class="summary-grid">
+      <div class="card">
+        <h2>Provider</h2>
+        <p id="provider">Loading...</p>
+      </div>
+      <div class="card">
+        <h2>Latency</h2>
+        <p id="latency">0 ms</p>
+      </div>
+      <div class="card">
+        <h2>Bandwidth</h2>
+        <p id="bandwidth">0 Mbps</p>
+      </div>
+      <div class="card">
+        <h2>Last Updated</h2>
+        <p id="timestamp">Waiting...</p>
+      </div>
+    </section>
+
+    <section class="chart-grid">
+      <div class="card chart-card">
+        <h2>Latency Trend</h2>
+        <canvas id="latencyChart"></canvas>
+      </div>
+
+      <div class="card chart-card">
+        <h2>Bandwidth Trend</h2>
+        <canvas id="bandwidthChart"></canvas>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Connection Log</h2>
+      <ul id="log"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #dcdfe4;
+  color: #283649;
+}
+
+header {
+  background: #1d2841;
+  color: rgb(231, 223, 223);
+  padding: 24px;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 24px auto;
+}
+
+.summary-grid,
+.chart-grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.summary-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.chart-grid {
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+.card {
+  background: rgb(233, 226, 226);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.chart-card {
+  height: 380px;
+}
+
+.chart-card canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+#log {
+  padding-left: 18px;
+  margin: 0;
+}
+
+#log li {
+  margin-bottom: 8px;
+}
